@@ -22,7 +22,8 @@ void draw()
 class Walker
 {
   int myX,myY;
-  boolean collide;
+  boolean collide = false;
+  Walker()
   {
     myX = myY = 250;
   }
