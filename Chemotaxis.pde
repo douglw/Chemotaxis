@@ -1,3 +1,24 @@
+Walker bob;
+Walker [] sunnysquare;
+void setup()
+{
+  size(500,500);
+  sunnysquare = new Walker[1000]; //1000 apartments
+  int i = 0;
+  while (i < 1000){
+    sunnysquare[i] = new Walker();
+    i = i + 1;
+  }
+}
+void draw()
+{
+  background(#FAEED9);
+  fill(#AFAFAF);
+  for(int i = 0; i < sunnysquare.length; i++){
+    sunnysquare[i].walk();
+    sunnysquare[i].show();
+   }
+}
 class Walker
 {
   int myX,myY;
@@ -20,27 +41,6 @@ class Walker
     }
     if(collide == false){
       ellipse(myX,myY,5,5);
+    }
   }
-}
-}
-Walker bob;
-Walker [] sunnysquare;
-void setup()
-{
-  size(500,500);
-  sunnysquare = new Walker[1000]; //1000 apartments
-  int i = 0;
-  while (i < 1000){
-    sunnysquare[i] = new Walker();
-    i = i + 1;
-  }
-}
-void draw()
-{
-  background(#FAEED9);
-  fill(#AFAFAF);
-  for(int i = 0; i < sunnysquare.length; i++){
-    sunnysquare[i].walk();
-    sunnysquare[i].show();
-   }
 }
